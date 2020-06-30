@@ -1,5 +1,5 @@
 /**
- * textFit v2.3.1
+ * textFit v2.4.1
  * Previously known as jQuery.textFit
  * 11/2014 by STRML (strml.github.com)
  * MIT License
@@ -32,6 +32,7 @@
   "use strict";
 
   var defaultSettings = {
+    lineHeight: null,
     alignVert: false, // if true, textFit will align vertically using css tables
     alignHoriz: false, // if true, textFit will set text-align: center
     multiLine: false, // if true, textFit will not set white-space: no-wrap
@@ -156,6 +157,7 @@
     while (low <= high) {
       mid = (high + low) >> 1;
       innerSpan.style.fontSize = mid + 'px';
+      if (settings.lineHeight) innerSpan.style.lineHeight = settings.lineHeight;
       if(innerSpan.scrollWidth <= originalWidth && (settings.widthOnly || innerSpan.scrollHeight <= originalHeight)){
         size = mid;
         low = mid + 1;
@@ -165,7 +167,10 @@
       // await injection point
     }
     // found, updating font if differs:
-    if( innerSpan.style.fontSize != size + 'px' ) innerSpan.style.fontSize = size + 'px';
+    if( innerSpan.style.fontSize != size + 'px' ) { 
+      innerSpan.style.fontSize = size + 'px';
+      if (settings.lineHeight) innerSpan.style.lineHeight = settings.lineHeight;
+    }
 
     // Our height is finalized. If we are aligning vertically, set that up.
     if (settings.alignVert) {
