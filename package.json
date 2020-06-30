@@ -1,6 +1,6 @@
 {
   "name": "textfit",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "A fast, jQuery-free text sizing component that quickly fits single and multi-line text to the width (and optionally height) of its container.",
   "main": "textFit.js",
   "directories": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/STRML/textFit.git"
+    "url": "https://github.com/m9dfukc/textFit.git"
   },
   "keywords": [
     "textfit",
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/STRML/textFit/issues"
   },
-  "homepage": "https://github.com/STRML/textFit",
+  "homepage": "https://github.com/m9dfukc/textFit",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },

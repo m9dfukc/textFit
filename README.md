@@ -3,8 +3,6 @@
 
 A **fast**, dependency-free text sizing component that quickly fits single and multi-line text to the width and/or height of its container.
 
-[Example](http://strml.github.com/examples/textFit.html)
-
 Capabilities
 ============
 
@@ -28,6 +26,16 @@ Functionality is identical between v1.0 and v2.0, the only change was the remova
 
 Changelog
 =========
+
+v2.4.1
+------
+
+* Added option to manually set lineHeight
+
+v2.4.0
+------
+
+* Fix [#26](https://github.com/STRML/textFit/issues/26) - don't shrink text more than necessary
 
 v2.3.1
 ------
@@ -172,6 +180,7 @@ settings = {
     detectMultiLine: true, // disable to turn off automatic multi-line sensing
     minFontSize: 6,
     maxFontSize: 80,
+    lineHeight: null, // if set, textFit will manually apply the line-height
     reProcess: true, // if true, textFit will re-process already-fit nodes. Set to 'false' for better performance
     widthOnly: false, // if true, textFit will fit text to element width, regardless of text height
     alignVertWithFlexbox: false, // if true, textFit will use flexbox for vertical alignment
